@@ -24,7 +24,7 @@
 .background-video{
     animation: apparition-op 2s ease-in both;
 }
-.top{
+.top {
     animation: apparition 1s ease-out both;
 }
 
