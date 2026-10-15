@@ -42,5 +42,6 @@
     animation: apparition 1s ease-out both;
     animation-delay: 1.5s;
 }
-
-
+html {
+  scroll-behavior:smooth;
+}
