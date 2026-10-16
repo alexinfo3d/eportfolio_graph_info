@@ -45,3 +45,7 @@
 html {
   scroll-behavior:smooth;
 }
+
+.bg-img02{
+    animation: apparition-op 1.5s ease-in both;
+}
