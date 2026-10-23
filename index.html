@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/animation.css">
+<script src="js/script.js" defer></script>
 </head>
 <body class="home">
 
@@ -17,21 +18,20 @@
 <a class="logo" href="index.html">le logo</a>
 <nav aria-label="Menu principal"><a href="index.html" aria-current="page">Accueil</a><a href="pages/informatique.html">Informatique</a><a href="pages/graphisme.html">Graphisme</a><a href="pages/contact.html">Contact</a></nav>
 </div></header>
-<main>
 
-<!--video-->
-<video autoplay muted loop playsinline id="background-video" src="videos/illus/vil03.mov" type="video/mov" class="background-video"></video>
-<div class="video-overlay"></div>
 
+<!--Video-->
+<section class="content-title-container">
+    <video class="bg-content" autoplay muted loop playsinline id="background-video" src="videos/illus/vil03.mov" type="video/mov" alt="bg-video"></video>
+    <div class="bg-content-overlay"></div>
 <!--Domaine et Nom-->
-<section class="hero"><div class="wrap">
-<p class="role">Informatique et Graphisme 3D</p>
-<h1 class="name">Alexandre GALTIER</h1>
-<!--<p class="lead">Infographiste 3D et Développeur passionné par mon métier et ses outils. Rigoureux et investi, je m’attache à respecter les délais, les demandes et les attentes de chaque projet, avec un fort sens des responsabilités et de l'organisation.</p>-->
-
-<!--Bouton-->
-<br><p><a class="btn" href="#introduction">En Savoir plus</a></p>
-</div></section>
+        <section class="hero"><div class="wrap">
+            <p class="role">Informatique et Graphisme 3D</p>
+            <h1 class="name">Alexandre GALTIER</h1>
+            <!--Bouton-->
+        <br><p><a class="btn" href="#introduction">En Savoir plus</a></p>
+        </div></section>
+</section>
 
 <!--Introduction-->
 <section id="introduction" class="intro-block"><div class="intro">
@@ -39,20 +39,46 @@
 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam deserunt quidem laborum magnam. Iure sapiente, repellat perspiciatis, atque tempora eveniet possimus vel quasi delectus aliquam, aspernatur modi impedit quo nam?</p>
 </div></section>
 
-<!--Image 01-->
-<div class="background-img">
-    <img src="img/3d/img01.png" alt="img_ship01">
-    <div class="img-overlay"></div>
-</div>
+<!--Content et Services-->
+<section class="content-services-container">
+    <img class="services-content" src="../eportfolio_graph_info/img/3d/img01.png" alt="bg-services">
+    <div class="services-content-overlay"></div>
 
-<!--<section class="wrap home-cats" id="categories">
-<h2 class="sr">Catégories</h2>
-<a class="tile y" href="pages/informatique.html"><h2>Informatique</h2><p>Description courte de la catégorie.</p><ul><li>Développement web</li><li>Développement logiciel</li><li>Bases de données</li><li>Réseaux et systèmes</li><li>Cybersécurité</li></ul><span class="go">Voir la catégorie</span></a>
-<a class="tile n" href="pages/graphisme.html"><h2>Graphisme</h2><p>Description courte de la catégorie.</p><ul><li>Identité visuelle</li><li>UI / UX design</li><li>Illustration</li><li>Print et mise en page</li><li>Photo et motion design</li></ul><span class="go">Voir la catégorie</span></a>
+<!--Services-->
+<section class="wrap-cat home-cats" id="categories"><div class="reveal">
+<a class="tile" href="pages/informatique.html">
+    <h2>Informatique</h2>
+    <p>Description courte de la catégorie.</p>
+    <ul>
+        <li>Développement web</li>
+        <li>Développement logiciel</li>
+        <li>Bases de données</li>
+        <li>Réseaux et systèmes</li>
+        <li>Cybersécurité</li>
+    </ul>
+<span class="go">Voir la catégorie</span></a>
+
+<a class="tile" href="pages/graphisme.html">
+    <h2>Graphisme</h2>
+    <p>Description courte de la catégorie.</p>
+    <ul>
+        <li>Identité visuelle</li>
+        <li>UI / UX design</li>
+        <li>Illustration</li>
+        <li>Print et mise en page</li>
+        <li>Photo et motion design</li>
+    </ul>
+    <span class="go">Voir la catégorie</span></a>
+</div></section>
+
 </section>
+<!--<p class="lead">Infographiste 3D et Développeur passionné par mon métier et ses outils. Rigoureux et investi, je m’attache à respecter les délais, les demandes et les attentes de chaque projet, avec un fort sens des responsabilités et de l'organisation.</p>-->
+
+
+<!--
 <section class="wrap about-teaser"><h2>À propos</h2><p>Court paragraphe de présentation : formation, centres d'intérêt, ce qui relie ton travail en informatique et en graphisme.</p><p><a href="pages/a-propos.html">Lire la suite</a></p></section>
 </main>-->
-<footer><div class="wrap"><p>© 2026 Galtier Alexandre</p><p><a href="pages/contact.html">Me contacter</a></p></div></footer>
-</main>
+<footer><div class="wrap-bot"><p>© 2026 Galtier Alexandre</p><p><a href="pages/contact.html">Me contacter</a></p></div></footer>
+
 </body>
 </html>

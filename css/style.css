@@ -1,11 +1,11 @@
 :root{
 --bg:#f7f4ec;--surface:#FFFFFF;--navy:#14213D;--navy-2:#2A3A5E;--yellow:#e2d386;--yellow-soft:#FBE9A0;--line:#DAD5C6;
---ink:var(--navy);--muted:#4A5675;--dark-trs:rgba(0, 0, 0, 0.6);--white-trs:rgba(255, 255, 255, 0.5);--dark:black;
+--ink:var(--navy);--muted:#4A5675;--dark-trs:rgba(0, 0, 0, 0.6);--white-trs:rgba(255, 255, 255, 0.5);--dark:black;--white-trs2:rgba(248, 248, 248, 0.3);
 --f-head:"Bricolage Grotesque",system-ui,sans-serif;--f-body:"DM Sans",system-ui,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--f-body)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--f-body);z-index: -10;}
 h1,h2,h3,h4{font-family:var(--f-head);line-height:1.15;margin:auto;letter-spacing:-.01em}
 h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800}
 h2{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:700}
@@ -14,16 +14,16 @@ h4{font-size:1.05rem;font-weight:700;margin-bottom:.3em}
 p{margin:0 0 1em;}
 a{color:var(--navy);text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--yellow)}
 :focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
-.wrap{max-width:1120px;margin:auto;padding:0 1.5rem;}
+.wrap{max-width:1120px;margin:auto;padding:12rem 1.5rem;}
 .sr{position:absolute;left:-9999px}
 
 /*--Background Generaux--*/
 .home {background-color: var(--dark);}
-.design {background-color: var();}
+.design {background-color: var(--bg);}
 
 /*--Barre Menu--*/
-.top{position:sticky;top:0;z-index:10;background:var(--dark-trs);}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:.8rem;padding-bottom:.8rem}
+.top{position:sticky;top:0;z-index:10;background:var(--dark-trs);margin-bottom:-74px;}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:.8rem;padding-bottom:.8rem;}
 .logo{font:800 1.25rem var(--f-head);color:var(--bg);text-decoration:none}
 .top nav{display:flex;gap:2rem;flex-wrap:wrap}
 .top nav a{color:var(--bg);text-decoration:none;padding:.4rem .8rem;border-radius:15px;font-weight:500}
@@ -40,27 +40,39 @@ a{color:var(--navy);text-decoration-thickness:2px;text-underline-offset:3px;text
 .btn:hover{background:var(--white-trs)}
 
 /*--Video--*/
-.background-video{width: 100%; height: 100%;position:absolute;z-index: -3;object-fit: cover;bottom: 0px;}
-.video-overlay{position: absolute;background:rgba(0, 0, 0, 0.3);inset: 0;bottom: 0px;z-index: -2}
+background-video{width: 100%; height: 100%;position:absolute;z-index: -3;object-fit: cover;bottom: 0px;}
+video-overlay{position: absolute;background:rgba(0, 0, 0, 0.3);inset: 0;bottom: 0px;z-index: -2}
 
-/*--Intro--*/
+/*--Introduction--*/
 .intro{text-align: center;font-size:25px;color:var(--bg);background-color: var(--dark);padding: 5rem 25rem;}
-.intro-block{position:relative;top: 300px;}
+.intro-block{position:relative;}
 
-/*--Image--*/
-.img02-title-container{position: relative;width: 100%;height: 100%;overflow: hidden;}
-    .bg-img02         {position:absolute;inset:0;z-index:-2;width:100%;height:auto;display:block;}
-    .bg-img02-overlay {position:absolute;inset:0;z-index:-1;background:var(--dark-trs)}
-    .bg-img02-overlay {position:absolute;inset:0;z-index:-3;background:var(--dark);}
+/*--Content et Titre--*/
+.content-title-container{position: relative;aspect-ratio: auto;WIDTH: 100%;height: 100vh;overflow: hidden;}
+    .bg-content{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;}
+    .bg-content-overlay{position:absolute;inset:0;z-index:-1;background:var(--dark-trs);}
+bg-img02-overlay {position:absolute;inset:0;z-index:-3;background:var(--dark);}
 
-.home-cats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:-3rem;position:relative}
-.tile{display:block;padding:2rem;border-radius:8px;text-decoration:none;min-height:320px;border:2px solid var(--navy)}
-.tile:hover{background-color:inherit;transform:translateY(-3px);transition:transform .15s}
-.tile.y{background:var(--yellow);color:var(--navy)}
-.tile.n{background:var(--surface);color:var(--navy)}
+/*--Content et Services--*/
+.content-services-container{position: relative;aspect-ratio: auto;WIDTH: 100%;height: 100vh;overflow: hidden;}
+    .services-content{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;}
+    .services-content-overlay{position:absolute;inset:0;z-index:-1;background:var(--dark-trs);}
+
+/*--Categories de Services--*/
+.home-cats{display:grid;grid-template-columns: repeat(2, minmax(0, 1fr));gap:1.5rem;margin-top:-3rem;position:relative;width: 100%;max-width: 1120px;}
+    .wrap-cat{justify-content:center;align-items:center;margin:auto;padding:.8rem 1.5rem;}
+.tile{display:block;flex-direction:column;padding:2rem;border-radius:15px;text-decoration:none;min-height:320px;background:rgba(0, 0, 0, 0.3);color:var(--bg)}
+.tile:hover{background-color:rgba(0, 0, 0, 0.5);transform:translateY(-3px);transition:transform .15s}
 .tile ul{padding-left:1.1rem;margin:1rem 0 1.5rem}
-.tile .go{font-weight:700;border-bottom:3px solid var(--navy)}
+.tile .go{font-weight:700;border-bottom:3px solid var(--bg)}
+
+
 .about-teaser{padding-top:4rem;padding-bottom:4rem;}
+
+
+.presentation_container{display:flex;justify-content:center;}
+    .presentation_texte{text-align: center;font-size:25px;color:var(--bg);background-color: var(--dark);padding: 3rem 10rem;width: 100%;}
+
 
 .pagehead{background:var(--navy);color:var(--bg);padding:3.5rem 0 3rem}
 .pagehead h1{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:.3em}
@@ -91,8 +103,10 @@ a{color:var(--navy);text-decoration-thickness:2px;text-underline-offset:3px;text
 .contact{list-style:none;padding:0;margin:0;display:grid;gap:.9rem}
 .contact li{display:grid;grid-template-columns:110px 1fr;gap:1rem;border-bottom:1px solid var(--line);padding-bottom:.9rem}
 
+/*--Bas de Page--*/
+.wrap-bot{max-width:1120px;margin:auto;padding:.5rem 1.5rem;}
 footer{background:var(--dark-trs);color:var(--bg);padding:1.5rem 0}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+footer .wrap-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
 footer p{margin:0}
 footer a{color:var(--bg);text-decoration: none;}
 footer a:hover{background:var(--white-trs);border-radius: 10px;padding:0.8rem 1.5rem;}
