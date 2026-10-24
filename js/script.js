@@ -1,4 +1,5 @@
-const elements = document.querySelectorAll(".reveal");
+// Détection visibilité catégories HOME
+const elements = document.querySelectorAll(".reveal, .appear");
 
 // Crée un observateur qui détecte leur apparition à l'écran
 const observer = new IntersectionObserver(

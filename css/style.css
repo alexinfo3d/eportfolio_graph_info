@@ -11,7 +11,7 @@ h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800}
 h2{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:700}
 h3{font-size:1.1rem;font-weight:700;margin-top:1.8em}
 h4{font-size:1.05rem;font-weight:700;margin-bottom:.3em}
-p{margin:0 0 1em;}
+p{margin:0 0 0em;}
 a{color:var(--navy);text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--yellow)}
 :focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
 .wrap{max-width:1120px;margin:auto;padding:12rem 1.5rem;}
@@ -19,7 +19,7 @@ a{color:var(--navy);text-decoration-thickness:2px;text-underline-offset:3px;text
 
 /*--Background Generaux--*/
 .home {background-color: var(--dark);}
-.design {background-color: var(--bg);}
+.design {background-color: var(--dark);}
 
 /*--Barre Menu--*/
 .top{position:sticky;top:0;z-index:10;background:var(--dark-trs);margin-bottom:-74px;}
@@ -71,9 +71,19 @@ video-overlay{position: absolute;background:rgba(0, 0, 0, 0.3);inset: 0;bottom: 
 .about-teaser{padding-top:4rem;padding-bottom:4rem;}
 
 
-.presentation_container{display:flex;justify-content:center;}
+.presentation_container{display:flex;justify-content:center;margin:0px;}
     .presentation_texte{text-align: center;font-size:25px;color:var(--bg);background-color: var(--dark);padding: 3rem 10rem;width: 100%;}
 
+/*--Categories des Arts--*/
+.art-cats{color:var(--bg);padding:10rem 0 10rem;text-align: center;margin: 20px;z-index: 2;}
+.art-cats p{font-size: 1.5rem;line-height: 1.5;margin-top: 20px;}
+.art-cats a{font-size:1.5rem;display:inline-block;color:var(--bg);padding:0.8rem 1.5rem;font-weight:700;align-self: center;margin-top: 20px;}
+.art-cats a:hover{transform:scale(1.1);transition:transform 0.5s;}
+.art-cats-container{position: relative;aspect-ratio: auto;WIDTH: 100%;height: 100vh;overflow: hidden;display:flex;}
+    .art-cats-container > div {position:relative;flex:1;}
+    .bg-art-cats{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;}
+    .bg-art-cats-overlay{position:absolute;inset:0;z-index:-1;background:var(--dark-trs);}
+    .bg-art-cats-overlay2{position:absolute;inset:0;z-index:-3;background:var(--dark);}
 
 .pagehead{background:var(--navy);color:var(--bg);padding:3.5rem 0 3rem}
 .pagehead h1{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:.3em}
