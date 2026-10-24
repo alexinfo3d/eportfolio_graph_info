@@ -44,10 +44,6 @@
     animation-delay: 1.5s;
 }
 
-html {
-  scroll-behavior:smooth;
-}
-
 /*Animation de révélation des Categories HOME*/
 
 /* État initial des éléments */
@@ -85,3 +81,4 @@ html {
 .appear:nth-child(2) { transition-delay: 0.6s; }
 .appear:nth-child(3) { transition-delay: 1.2s; }
 
+.art-cats-container .appear { transform: none; }

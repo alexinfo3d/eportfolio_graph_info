@@ -4,7 +4,7 @@
 --f-head:"Bricolage Grotesque",system-ui,sans-serif;--f-body:"DM Sans",system-ui,sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
+html{scroll-behavior:smooth;scroll-padding-top:90px;overflow-y:scroll;}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--f-body);z-index: -10;}
 h1,h2,h3,h4{font-family:var(--f-head);line-height:1.15;margin:auto;letter-spacing:-.01em}
 h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800}
@@ -26,25 +26,25 @@ a{color:var(--navy);text-decoration-thickness:2px;text-underline-offset:3px;text
 .bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:.8rem;padding-bottom:.8rem;}
 .logo{font:800 1.25rem var(--f-head);color:var(--bg);text-decoration:none}
 .top nav{display:flex;gap:2rem;flex-wrap:wrap}
-.top nav a{color:var(--bg);text-decoration:none;padding:.4rem .8rem;border-radius:15px;font-weight:500}
-.top nav a:hover{background:var(--white-trs)}
-.top nav a[aria-current]{background:var(--bg);color:var(--dark);font-weight:700}
+.top nav a{color:var(--bg);text-decoration:none;padding:.4rem .8rem;border-radius:15px;font-weight:500;}
+.top nav a:hover{background:var(--white-trs);scale:1.05;transition:scale 0.2s ease-in}
+.top nav a[aria-current]{background:var(--bg);color:var(--dark);font-weight:500}
 
 /*--Titre - Domaine et Nom--*/
 .hero{color:var(--bg);padding:10rem 0 10rem;text-align: center;}
 .hero .role{color:var(--bg);font-weight:700;font-size: 2rem;}
 .hero .name{font-size: 8rem;white-space:nowrap;}
 .hero .lead{font-size:1.25rem;color:var(--bg);text-align: center;margin: 50px;}
-/*--Bouton "Contact"--*/
-.btn{display:inline-block;background:var(--bg);color:var(--dark);padding:0.8rem 1.5rem;border-radius:20px;font-weight:700;text-decoration:none;align-self: center;}
-.btn:hover{background:var(--white-trs);color:var(--dark-trs);}
+/*--Bouton Savoir Plus--*/
+.btn{display:inline-block;background:var(--bg);color:var(--dark);padding:0.8rem 1.5rem;border-radius:20px;font-weight:700;text-decoration:none;align-self: center;scale:1;transition:scale 0.3s ease-out;}
+.btn:hover{background:var(--white-trs);color:var(--dark-trs);scale:1.1;transition:scale 0.3s ease-in;}
 
 /*--Video--*/
 background-video{width: 100%; height: 100%;position:absolute;z-index: -3;object-fit: cover;bottom: 0px;}
 video-overlay{position: absolute;background:rgba(0, 0, 0, 0.3);inset: 0;bottom: 0px;z-index: -2}
 
 /*--Introduction--*/
-.intro{text-align: center;font-size:25px;color:var(--bg);background-color: var(--dark);padding: 5rem 25rem;}
+.intro{text-align: center;font-size:25px;color:var(--bg);background-color: var(--dark);padding: 5rem 25rem;margin: 0px;}
 .intro-block{position:relative;}
 
 /*--Content et Titre--*/
@@ -84,6 +84,11 @@ video-overlay{position: absolute;background:rgba(0, 0, 0, 0.3);inset: 0;bottom: 
     .bg-art-cats{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;}
     .bg-art-cats-overlay{position:absolute;inset:0;z-index:-1;background:var(--dark-trs);}
     .bg-art-cats-overlay2{position:absolute;inset:0;z-index:-3;background:var(--dark);}
+
+/*--Voir tous les projets--*/
+.see-projects-container{display:flex;justify-content:center;margin: 50px;position: relative;}
+    .see-projects{position:absolute;font-size:3rem;display:inline-block;color:var(--bg);padding:0.8rem 1.5rem;font-weight:700;align-self: center;margin-top: 0px;}
+
 
 .pagehead{background:var(--navy);color:var(--bg);padding:3.5rem 0 3rem}
 .pagehead h1{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:.3em}
