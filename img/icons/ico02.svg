@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <title>Flèche vers la droite aux extrémités arrondies</title>
+  <path d="M64 256H432M300 124L432 256 300 388"
+        fill="none" stroke="#111111" stroke-width="40"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

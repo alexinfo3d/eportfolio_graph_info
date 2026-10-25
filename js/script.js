@@ -1,29 +1,36 @@
 // Détection visibilité catégories HOME
-const elements = document.querySelectorAll(".reveal, .appear");
 
-// Crée un observateur qui détecte leur apparition à l'écran
+const elements = document.querySelectorAll(".reveal, .appear:not(.see-projects-container)");
+
 const observer = new IntersectionObserver(
     (entries, observer) => {
         entries.forEach((entry) => {
-
-            // Vérifie si l'élément devient visible
             if (entry.isIntersecting) {
-
-                // Déclenche l'animation CSS
                 entry.target.classList.add("visible");
-
-                // Arrête l'observation après l'animation
                 observer.unobserve(entry.target);
             }
         });
     },
-    // le pourcentage visible nécessaire pour déclencher l'animation //
     {
         threshold: 0.3
     }
 );
 
-// Observe chaque élément
 elements.forEach((element) => {
     observer.observe(element);
 });
+
+// Afficher le bouton après l'apparition de la 3e catégorie
+const troisiemeImage = document.querySelector(".am-cat");
+const projets = document.querySelector(".see-projects-container");
+
+if (troisiemeImage && projets) {
+    troisiemeImage.addEventListener("transitionend", (event) => {
+        if (
+            event.propertyName === "opacity" &&
+            troisiemeImage.classList.contains("visible")
+        ) {
+            projets.classList.add("visible");
+        }
+    });
+}

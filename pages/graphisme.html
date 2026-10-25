@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/animation.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js" defer></script>
 </head>
 <body class="design">
@@ -19,7 +19,15 @@
 <nav aria-label="Menu principal">
     <a href="../index.html">Accueil</a>
     <a href="informatique.html">Informatique</a>
-    <a href="graphisme.html"  aria-current="page">Graphisme</a>
+    <div class="dropdown">
+        <a href="graphisme.html" aria-current="page">Graphisme</a>
+        <ul class="dropdown-menu">
+            <li><a href="graphisme/projets-design/page-projets-design.html">Parcourir les Projets</a></li>
+            <li><a href="graphisme/histoire.html">Histoire et Patrimoine</a></li>
+            <li><a href="graphisme/jeux-video.html">Jeux-Vidéo</a></li>
+            <li><a href="graphisme/art-et-mouvement.html">Art et Mouvement</a></li>
+        </ul>
+    </div>
     <a href="contact.html">Contact</a>
 </nav>
 </div></header>
@@ -72,14 +80,13 @@
     <hidden id="categories-arts"></hidden>
 </section>
 
-<div class="see-projects-container">
-    <a class="see-projects" href="#projets">Voir tous les projets</a>
+<div class="see-projects-container appear">
+    <span class="line"></span>
+    <a class="see-projects" href="graphisme/projets-design/page-projets-design.html"><img class="file-icon" src="../img/icons/ico01.svg" alt="file">Découvrir tous les projets<img class="arrow-icon" src="../img/icons/ico02.svg" alt="file"></a>
+    <span class="line"></span>
 </div>
 
-
-
-
-
+<footer><div class="wrap-bot"><p>© 2026 Galtier Alexandre</p><p><a href="pages/contact.html">Me contacter</a></p></div></footer>
 
 </body>
 </html>

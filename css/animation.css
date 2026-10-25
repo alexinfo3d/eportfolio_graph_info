@@ -1,4 +1,4 @@
-:root{--reveal-delay:1.2s}
+:root{--reveal-delay:1.2s;--reveal-delay2:2s}
 @keyframes apparition {
   from {
     opacity: 0;
@@ -62,6 +62,7 @@
     transform: translateY(0);
 }
 
+/*Animation de révélation des Categories Arts*/
 .appear {
     opacity: 0;
     transform: translateY(40px);
@@ -75,6 +76,20 @@
 .appear.visible {
     opacity: 1;
     transform: translateY(0);
+}
+.see-projects-container.appear  {
+    opacity: 0;
+    transform: translateY(0px);
+
+    transition:
+        opacity var(--reveal-delay2) ease,
+        transform var(--reveal-delay2) ease;
+}
+
+/* État visible après le déclenchement */
+.see-projects-container.appear.visible {
+    opacity: 1;
+    transform: translateY(-110px);
 }
 
 .appear:nth-child(1) { transition-delay: 0s; }
