@@ -41,8 +41,8 @@ if (troisiemeImage && projets) {
   // Pour utiliser vos propres images, ajoutez aussi  image: "chemin/vers/image.jpg".
   // Sans ce champ, une vignette illustrée est générée automatiquement.
   var PROJECTS = [
-    { title: "Le Nemesis Bleu", desc: "Modélisation d'un navire du début du 19ème siècle",url : "projet01-nmb.html", image :"../../../img/projets-3d/projet01/Vignette.jpg" }
-
+    { title: "Le Nemesis Bleu", desc: "Modélisation d'un navire du début du 19ème siècle",url : "projet01-nmb.html", image :"../../../img/projets-3d/projet01-nmb/Vignette.jpg" },
+    { title: "Le Manoir", desc: "Scène d'un salon Victorien",url : "projet02-hm.html", image :"../../../img/projets-3d/projet02-hm/P_AE_0.jpg" }
   ];
 
   function norm(s) {
