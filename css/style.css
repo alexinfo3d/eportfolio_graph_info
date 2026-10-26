@@ -76,11 +76,11 @@ video-overlay{position: absolute;background:rgba(0, 0, 0, 0.3);inset: 0;bottom: 
 .intro-block{position:relative;}
 
 /*--Content et Titre--*/
-.content-title-container{position: relative;aspect-ratio: auto;WIDTH: 100%;height: 100vh;overflow: hidden;}
+.content-title-container{position: relative;aspect-ratio: auto;WIDTH: 100%;height: 100%;overflow: hidden;}
     .bg-content{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;}
     .bg-content-overlay{position:absolute;inset:0;z-index:-1;background:var(--dark-trs);}
     .bg-content-overlay2{position:absolute;inset:0;z-index:-3;background:var(--dark);}
-
+    
 /*--Content et Services--*/
 .content-services-container{position: relative;aspect-ratio: auto;WIDTH: 100%;height: 100vh;overflow: hidden;}
     .services-content{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;}

@@ -25,6 +25,7 @@
 .bg-content{
     animation: apparition-op 2s ease-in both;
 }
+
 .top {
     animation: apparition 1s ease-out both;
 }
